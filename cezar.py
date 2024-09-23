@@ -1,3 +1,4 @@
+#Importing necersarry  libraries
 import tkinter as tk
 import os
 from tkinter import * 
@@ -5,8 +6,11 @@ from tkinter import messagebox
 
 root = tk.Tk()
 
+# Defining the alphabet
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+# Creating GUI 
 label = tk.Label(root, text="Wpisz tekst:")
 label.grid(column= 0, row=0)
 
@@ -19,6 +23,7 @@ shift_l.grid(column=0, row=2)
 shift_e = tk.Entry(root)
 shift_e.grid(column=0, row=3)
 
+# Function for cezar encryption
 def cezar():
     text = entry.get().lower()  
     shift = shift_e.get()

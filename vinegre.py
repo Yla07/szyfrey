@@ -1,8 +1,12 @@
+
+#Importing necersarry  libraries
 import tkinter as tk
 from tkinter import messagebox
 
 root = tk.Tk()
 
+
+# Generating key 
 def generateKey(string, key): 
     key = list(key) 
     if len(string) == len(key): 
@@ -12,6 +16,7 @@ def generateKey(string, key):
             key.append(key[i % len(key)]) 
     return "".join(key)
 
+# Encrypting text 
 def encryption(string, key): 
     encrypt_text = [] 
     for i in range(len(string)): 
@@ -22,6 +27,7 @@ def encryption(string, key):
     messagebox.showinfo(title="Output", message="Zaszyfrowany tekst to: " + str(encrypt_text))
     return encrypt_text
 
+# Decrypting text 
 def decryption(string, key): 
     orig_text = [] 
     for i in range(len(string)): 
